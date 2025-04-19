@@ -1,0 +1,50 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    background: var(--vslightgrey);
+    min-height: 93vh;
+    height: fit-content;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    height: 7vh;
+    background: var(--vsmedgrey);
+    text-align: center;
+}
+.main-container{
+    display: flex;  
+    flex: 1;  
+}
+.sidebar{
+    width: 15%;
+
+    background: var(--vsgrey);
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+.buttons{
+    width: 90%;
+    height: 35px;
+    margin: 10px 0 10px 0;
+    font-weight: 600;
+    background-color: black;
+    border-color: var(--vsblue);
+    color: white;
+    border-radius: 10px;
+}
+.contacts{
+    width: 85%;
+    position: relative;
+    min-height: 100%;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+    width: 100%;
+    background: var(--vsmedgrey);
+}

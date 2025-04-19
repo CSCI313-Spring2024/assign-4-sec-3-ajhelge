@@ -1,0 +1,20 @@
+<div class="card-main">
+    <div class="upper">
+        <div class="infobox">
+            <p>Firstname: {{contact.first}} </p>
+        </div>
+        <div class="infobox">
+            <p>Lastname: {{contact.last}} </p>
+        </div>
+        <div class="infobox">
+            <p>Phone Number: {{contact.phone}} </p>
+        </div>
+        <div class="infobox">
+            <p>Email: {{contact.email}} </p>
+        </div>
+    </div>
+    <div class="lower">
+        <button class="buttons" (click)="OnDelete()">Delete</button>
+        <button class="buttons" (click)="OnEdit()">Edit</button>
+    </div>
+</div>

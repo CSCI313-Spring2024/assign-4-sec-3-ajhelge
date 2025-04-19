@@ -1,0 +1,27 @@
+<div class="modal-backdrop" (click)="close()"></div>
+
+<div class="modal-window">
+    <div class="header">
+        <h2>Add Contact</h2>
+    </div>
+    <form (ngSubmit)="submit()" #contactForm="ngForm">
+        <div class="upper">
+            <div class="upperLeft">
+                <input class="text-field" type="text" name="first" [(ngModel)]="newContact.first"
+                    placeholder="First Name" required />
+                <input class="text-field" type="text" name="last" [(ngModel)]="newContact.last"
+                    placeholder="Last Name" required />
+            </div>
+            <div class="upperRight">
+                <input class="text-field" type="email" name="email" [(ngModel)]="newContact.email"
+                    placeholder="Email" required />
+                <input class="text-field" type="tel" name="phone" [(ngModel)]="newContact.phone"
+                    placeholder="Phone" required />
+            </div>
+        </div>
+        <div class="lower">
+            <button class="button" type="submit" [disabled]="!contactForm.valid">Add</button>
+            <button class="button" type="button" (click)="close()">Cancel</button>
+        </div>
+    </form>
+</div>

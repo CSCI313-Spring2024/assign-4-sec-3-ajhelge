@@ -1,0 +1,35 @@
+.card-main{
+    display: flex;
+    width: 98%;
+    height: 80px;
+    flex-direction: column;
+    margin: 10px 10px 10px 10px;
+    background-color: var(--vsgrey);
+    border-radius: 20px;
+}
+.upper{
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+}
+.infobox{
+    width: 300px;
+    margin: 0 0 0 10px;
+}
+.lower{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-content: center;
+    height: 50%;
+}
+.buttons{
+    width: 100px;
+    height: 35px;
+    margin: 0 20px 0 20px;
+    font-weight: 600;
+    background-color: black;
+    border-color: var(--vsblue);
+    color: white;
+    border-radius: 10px;
+}

@@ -1,1 +1,35 @@
-<div>Hello World!</div>
+<ng-container>
+  <div class="main">
+    <div class="header">
+      <h1>Assignment 4</h1>
+    </div>
+    <div class="main-container">
+      <div class="sidebar">
+        <button class="buttons" (click)="showModal = true">Add Contact</button>
+      </div>
+      <div class="contacts">
+        <ng-container *ngFor="let c of contacts">
+          <app-contact-card
+           [contact]="c"
+           (delete)="deleteContact($event)"
+           (edit)="startEditContact($event)">
+          </app-contact-card>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <p>Alec Helgeson</p>
+  </div>
+</ng-container>
+<app-add-contact
+  *ngIf="showModal"
+  (add)="addContact($event)"
+  (closeModal)="showModal = false">
+</app-add-contact>
+<app-edit-contact
+  *ngIf="showEditModal"
+  [contact]="editContactData"
+  (save)="saveEditedContact($event)"
+  (closeModal)="showEditModal = false">
+</app-edit-contact>
